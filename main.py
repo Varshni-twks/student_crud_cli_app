@@ -32,6 +32,17 @@ def add():
 
     students_object.add(Student(roll_no=roll_no, name=name, standard=standard))
 
+@app.command()
+def update():
+    name = input("Enter student Name:")
+    roll_no = input("Enter student roll number:")
+    standard = input("Enter standard(I to XII):")
+
+    students_object.update(Student(roll_no=roll_no, name=name, standard=standard))
+
+@app.command()
+def delete(roll_no: str):
+    students_object.delete(roll_no)
 
 if __name__ == "__main__":
     app()
