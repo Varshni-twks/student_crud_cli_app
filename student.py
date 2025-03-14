@@ -15,7 +15,6 @@ class Students:
         self.load_data()
 
     def show(self) -> list[Student]:
-        print(len(self.students))
         return self.students
     
     def get(self, roll_no:str) -> Student | None:
@@ -26,7 +25,6 @@ class Students:
     
     def add(self, student: Student) -> None:
         self.students.append(student)
-        print(self.students)
         self.save_data()
 
     def delete(self, roll_no:str) -> None:

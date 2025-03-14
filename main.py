@@ -10,16 +10,17 @@ students_object = Students()
 @app.command()
 def show():
     students = students_object.show()
-    print("ROLL NO \t | NAME \t | STANDARD \t |")
+    print(f"{"ROLL NO":<15} | {"NAME":<15} | {"STANDARD":<15} |")
+    print("-"*53)
     for student in students:
-        print(f"{student.roll_no} \t | {student.name} \t | {student.standard} \t |")
+        print(f"{student.roll_no:<15} | {student.name:<15} | {student.standard:<15} |")
 
 
 @app.command()
 def get(roll_no: str):
     student = students_object.get(roll_no)
     if student:
-        print(f"{student.roll_no} \t | {student.name} \t | {student.standard} \t |")
+        print(f"{student.roll_no:<15} | {student.name:<15} | {student.standard:<15} |")
     else:
         print("No student found with given roll Number")
 
