@@ -12,9 +12,10 @@ class Students:
         self.students: list[Student] = []
 
     def show(self) -> list[Student]:
+        print(len(self.students))
         return self.students
     
-    def get(self, roll_no:int) -> Student | None:
+    def get(self, roll_no:str) -> Student | None:
         for student in self.students:
             if student.roll_no == roll_no:
                 return student
@@ -22,8 +23,9 @@ class Students:
     
     def add(self, student: Student) -> None:
         self.students.append(student)
+        print(self.students)
 
-    def delete(self, roll_no:int) -> None:
+    def delete(self, roll_no:str) -> None:
         student = self.get(roll_no)
         if student:
             self.students.remove(student)
