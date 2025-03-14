@@ -1,0 +1,8 @@
+__pycache__
+.mypy_cache
+.vscode
+.idea
+*.pyc
+*.pyo
+*.pyd
+students.json
